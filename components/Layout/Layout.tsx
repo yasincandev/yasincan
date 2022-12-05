@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { ReactNode } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { useThemeContext } from "../../hooks";
 import GlobalStyles from "../../styles/GlobalStyles";
 import { dark, light } from "../../theme";
