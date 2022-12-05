@@ -2,7 +2,7 @@ import { FC } from "react";
 import pages from "../../data/pages.json";
 import Link from "next/link";
 import useThemeContext from "../../hooks/useThemeContext";
-import { Nav, Logo, ThemeContainer, MenuList, MenuItem } from "./Styled.Navbar";
+import { Nav, Logo, ThemeContainer, MenuList, MenuItem } from "./styles";
 import { Sunrise } from "../Icons/Sunrise";
 import { Sunset } from "../Icons/Sunset";
 

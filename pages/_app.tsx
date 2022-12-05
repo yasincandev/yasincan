@@ -17,21 +17,16 @@ type AppPropsWithLayout = AppProps & {
 };
 
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
-  const { theme } = useThemeContext();
-  const currentTheme = theme === "dark" ? dark : light;
   return (
-    <ThemeProvider theme={currentTheme}>
-      <ThemeContextProvider>
-        <GlobalStyles />
-        {Component.getLayout ? (
-          Component.getLayout(<Component {...pageProps} />)
-        ) : (
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        )}
-      </ThemeContextProvider>
-    </ThemeProvider>
+    <ThemeContextProvider>
+      {Component.getLayout ? (
+        Component.getLayout(<Component {...pageProps} />)
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+    </ThemeContextProvider>
   );
 };
 
