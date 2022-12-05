@@ -10,6 +10,7 @@ export const Container = styled.div`
   min-height: 100vh;
   transition: background-color 0.3s ease;
   background-color: ${(props) => props.theme.backgroundColor};
+  align-items: center;
 `;
 
 export const ImageContainer = styled.div`

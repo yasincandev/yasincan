@@ -1,16 +1,16 @@
 import { FC } from "react";
-import { AboutContainer, AboutMe } from "./Styles";
+import { AboutContainer, AboutMe, AboutMeText, AboutMeTitle } from "./styles";
 
 const AboutPage: FC = () => {
   return (
     <AboutContainer>
       <AboutMe>
-        <h3>About Me</h3>
-        <p>
+        <AboutMeTitle>About Me</AboutMeTitle>
+        <AboutMeText>
           I&#39;m Yasin and I am a junior frontend developer. I&#39;m 26 years
           old and live in Izmir, Turkey.
-        </p>
-        <p>
+        </AboutMeText>
+        <AboutMeText>
           I take care to follow the latest developments in the frontend area and
           stay up to date. I&#39;m a social person and a team player. I like to
           take initiative and responsibility to inspire others. I like to
@@ -21,7 +21,7 @@ const AboutPage: FC = () => {
           decision and stepped on this path.So far, I can say that I have
           learned everything by researching on my own. I am always improving
           myself and I am open to innovations.
-        </p>
+        </AboutMeText>
       </AboutMe>
     </AboutContainer>
   );

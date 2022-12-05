@@ -17,7 +17,11 @@ const Navbar: FC = () => {
       <MenuList>
         {pages.map((page) => {
           return (
-            <Link key={page.id} href={page.href} passHref>
+            <Link
+              key={page.id}
+              href={page.href}
+              style={{ textDecoration: "none" }}
+            >
               <MenuItem>{page.name}</MenuItem>
             </Link>
           );
