@@ -78,14 +78,16 @@ export const FormContainer = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 0px 1em;
-  width: 100%;
-  height: 100%;
   gap: 10px;
-
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  margin: 0 auto;
   border-left: 1px solid ${(props) => props.theme.helloColor};
+
+  @media screen and (max-width: 768px) {
+    border-left: none;
+    width: 100%;
+    border-top: 1px solid ${(props) => props.theme.helloColor};
+  }
 `;
 
 export const FormHeader = styled.h3`
@@ -112,7 +114,6 @@ export const LinkText = styled.p`
 `;
 
 export const Input = styled.input`
-  margin: 15px 0;
   font-size: 16px;
   padding: 10px;
   width: 80%;
@@ -128,7 +129,6 @@ export const Label = styled.label`
 `;
 
 export const TextArea = styled.textarea`
-  margin: 15px 0;
   font-size: 16px;
   height: 5em;
   padding: 10px;
