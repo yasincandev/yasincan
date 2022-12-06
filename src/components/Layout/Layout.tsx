@@ -5,7 +5,12 @@ import { useThemeContext } from "../../hooks";
 import GlobalStyles from "../../styles/GlobalStyles";
 import { dark, light } from "../../theme";
 import Navbar from "../Navbar/Navbar";
-import { Container, ImageContainer, ContentContainer } from "./styles";
+import {
+  Container,
+  ImageContainer,
+  ContentContainer,
+  MainContainer,
+} from "./styles";
 import * as mainImage from "../../public/assets/main.png";
 
 type LayoutProps = {
@@ -25,12 +30,19 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
             <Image
               src={mainImage}
               alt='main'
-              width={500}
-              height={500}
               priority
+              placeholder='blur'
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              width={400}
+              height={400}
             />
           </ImageContainer>
-          <main>{children}</main>
+          <MainContainer>{children}</MainContainer>
         </ContentContainer>
       </Container>
     </ThemeProvider>

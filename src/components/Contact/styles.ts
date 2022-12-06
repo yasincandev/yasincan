@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Contact = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 90%;
   height: 100%;
@@ -13,6 +14,13 @@ export const Contact = styled.div`
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    flex-direction: row;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -20,7 +28,7 @@ export const LinksContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-right: 1px solid ${(props) => props.theme.helloColor};
+
   gap: 1em;
   list-style: none;
   font-family: "Open Sans", sans-serif;
@@ -29,6 +37,13 @@ export const LinksContainer = styled.div`
   padding: 1em;
   width: 100%;
   height: 100%;
+
+  @media screen and (min-width: 768px) {
+    border-right: 1px solid ${(props) => props.theme.helloColor};
+    width: 50%;
+    height: 100%;
+    font-size: 1.5em;
+  }
 `;
 
 export const FormContainer = styled.form`
@@ -55,6 +70,11 @@ export const LinkContainer = styled.div`
   align-items: center;
   gap: 0px 1em;
   width: 100%;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+  }
+  cursor: pointer;
 `;
 
 export const LinkText = styled.p`

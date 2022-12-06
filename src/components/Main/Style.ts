@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  gap: 0px 1em;
+  gap: 2rem;
 `;
 
 export const GreetingContainer = styled.div`
@@ -14,7 +14,7 @@ export const GreetingContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-
+  height: 100%;
   transition: all 0.5s ease;
 `;
 
@@ -24,8 +24,8 @@ export const GreetingText = styled.h1`
   font-weight: 900;
   font-style: italic;
   text-align: center;
-  font-size: 48px;
-  grid-area: GreetingText;
+  font-size: 1.5rem;
+
   text-transform: Capitalize;
   padding: 0.5em;
   width: 100%;
@@ -70,7 +70,8 @@ export const GreetingText = styled.h1`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-top: 1rem;
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.helloColor};
@@ -81,6 +82,10 @@ export const InfoText = styled.span`
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  font-size: 20px;
+  font-size: 1rem;
   letter-spacing: 0.2rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;

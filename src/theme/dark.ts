@@ -10,6 +10,7 @@ const theme: DefaultTheme = {
   hoverText: Colors.black,
   aboutMeBg: Colors.wetasphalt,
   aboutMeColor: Colors.cloudWhite,
+  mobileMenuBg: Colors.black,
 };
 
 export default theme;

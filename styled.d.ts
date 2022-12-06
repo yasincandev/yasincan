@@ -10,5 +10,6 @@ declare module "styled-components" {
     hoverText: string;
     aboutMeBg: string;
     aboutMeColor: string;
+    mobileMenuBg: string;
   }
 }

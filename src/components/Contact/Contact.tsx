@@ -42,27 +42,57 @@ const ContactPage: FC = () => {
   return (
     <Contact>
       <LinksContainer>
-        <LinkContainer>
-          <Link href='https://linkedin.com/in/yasincandev' target='_blank'>
+        <Link
+          href='https://linkedin.com/in/yasincandev'
+          target='_blank'
+          style={{
+            display: "flex",
+
+            alignItems: "center",
+            gap: "0px 1em",
+            width: "100%",
+            cursor: "pointer",
+          }}
+        >
+          <LinkContainer>
             <Linkedin style={{ width: "2.5rem", height: "2.5rem" }} />
-          </Link>
-          <LinkText>Connect with me on LinkedIn</LinkText>
-        </LinkContainer>
-        <LinkContainer>
-          <Link href='https://github.com/yasincandev' target='_blank'>
+            <LinkText>Connect with me on LinkedIn</LinkText>
+          </LinkContainer>
+        </Link>
+        <Link
+          style={{
+            display: "flex",
+
+            alignItems: "center",
+            gap: "0px 1em",
+            width: "100%",
+            cursor: "pointer",
+          }}
+          href='https://github.com/yasincandev'
+          target='_blank'
+        >
+          <LinkContainer>
             <Github style={{ width: "2.5rem", height: "2.5rem" }} />
-          </Link>
-          <LinkText>Check out my Github</LinkText>
-        </LinkContainer>
-        <LinkContainer>
-          <Link
-            href='https://drive.google.com/file/d/1qAf-7f6HPLbHbzNaF6fK-W9xlC2GOjfz/view'
-            target='_blank'
-          >
+            <LinkText>Check out my Github</LinkText>
+          </LinkContainer>
+        </Link>
+        <Link
+          style={{
+            display: "flex",
+
+            alignItems: "center",
+            gap: "0px 1em",
+            width: "100%",
+            cursor: "pointer",
+          }}
+          href='https://drive.google.com/file/d/1qAf-7f6HPLbHbzNaF6fK-W9xlC2GOjfz/view'
+          target='_blank'
+        >
+          <LinkContainer>
             <Resume style={{ width: "2.5rem", height: "2.5rem" }} />
-          </Link>
-          <LinkText>Check out my Resume</LinkText>
-        </LinkContainer>
+            <LinkText>Check out my Resume</LinkText>
+          </LinkContainer>
+        </Link>
       </LinksContainer>
       <FormContainer onSubmit={sendEmail}>
         <FormHeader>Get In Touch</FormHeader>

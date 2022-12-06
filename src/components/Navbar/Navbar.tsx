@@ -9,6 +9,9 @@ import {
   MenuList,
   MenuItem,
   MobileMenu,
+  MobileMenuList,
+  MobileMenuListContainer,
+  MobileMenuItem,
 } from "./styles";
 import { Sunrise } from "../Icons/Sunrise";
 import { Sunset } from "../Icons/Sunset";
@@ -44,34 +47,38 @@ const Navbar: FC = () => {
       </MenuList>
       <ThemeContainer>
         {theme === "dark" ? (
-          <Sunset onClick={toggleTheme} />
+          <Sunset onClick={toggleTheme} style={{ width: "3.5rem" }} />
         ) : (
-          <Sunrise onClick={toggleTheme} />
+          <Sunrise onClick={toggleTheme} style={{ width: "3.5rem" }} />
         )}
       </ThemeContainer>
       <MobileMenu>
         {open ? (
           <CloseMenu
             onClick={handleToggle}
-            style={{ width: "2.5rem", height: "2.5rem" }}
+            style={{ width: "2.5rem", height: "2rem" }}
           />
         ) : (
-          <Hamburger onClick={handleToggle} style={{ width: "2.5rem" }} />
+          <Hamburger onClick={handleToggle} style={{ width: "1.75rem" }} />
         )}
         {open && (
-          <MenuList>
-            {pages.map((page) => {
-              return (
-                <Link
-                  key={page.id}
-                  href={page.href}
-                  style={{ textDecoration: "none" }}
-                >
-                  <MenuItem onClick={handleToggle}>{page.name}</MenuItem>
-                </Link>
-              );
-            })}
-          </MenuList>
+          <MobileMenuListContainer>
+            <MobileMenuList>
+              {pages.map((page) => {
+                return (
+                  <Link
+                    key={page.id}
+                    href={page.href}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <MobileMenuItem onClick={handleToggle}>
+                      {page.name}
+                    </MobileMenuItem>
+                  </Link>
+                );
+              })}
+            </MobileMenuList>
+          </MobileMenuListContainer>
         )}
       </MobileMenu>
     </Nav>
