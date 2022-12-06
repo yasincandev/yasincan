@@ -12,7 +12,9 @@ export const GreetingContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   transition: all 0.5s ease;
@@ -84,6 +86,7 @@ export const InfoText = styled.span`
   text-align: center;
   font-size: 1rem;
   letter-spacing: 0.2rem;
+  color: ${(props) => props.theme.modeColor};
 
   @media screen and (min-width: 768px) {
     font-size: 1.5rem;

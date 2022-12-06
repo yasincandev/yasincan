@@ -35,7 +35,9 @@ const Navbar: FC = () => {
     <Nav>
       <DesktopMenu>
         <Logo>
-          <h3>&#10094; YASINCANDEV &#10095;</h3>
+          <Link href='/' style={{ textDecoration: "none", color: "inherit" }}>
+            <h3>&#10094; YASINCANDEV &#10095;</h3>
+          </Link>
         </Logo>
         <MenuList>
           {pages.map((page) => {
@@ -67,7 +69,15 @@ const Navbar: FC = () => {
           )}
         </MobileThemeContainer>
         <MobileLogo>
-          <h3>&#10094; {""} &#10095;</h3>
+          <Link
+            href='/'
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            <h3>&#10094; {""} &#10095;</h3>
+          </Link>
         </MobileLogo>
         <MobileHamburgerMenu>
           {open ? (

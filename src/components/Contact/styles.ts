@@ -16,10 +16,39 @@ export const Contact = styled.div`
   border-radius: 10px;
 
   @media screen and (min-width: 768px) {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     font-size: 1.5em;
     flex-direction: row;
+  }
+
+  -webkit-animation: Contact 0.5s 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    both;
+  animation: Contact 0.5s 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
+
+  @-webkit-keyframes Contact {
+    0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  }
+  @keyframes Contact {
+    0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
   }
 `;
 
@@ -39,7 +68,6 @@ export const LinksContainer = styled.div`
   height: 100%;
 
   @media screen and (min-width: 768px) {
-    border-right: 1px solid ${(props) => props.theme.helloColor};
     width: 50%;
     height: 100%;
     font-size: 1.5em;
@@ -54,9 +82,10 @@ export const FormContainer = styled.form`
   width: 100%;
   height: 100%;
   gap: 10px;
-  border-radius: 0.5em;
+
   width: 100%;
   height: 100%;
+  border-left: 1px solid ${(props) => props.theme.helloColor};
 `;
 
 export const FormHeader = styled.h3`

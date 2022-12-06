@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+
   flex-direction: column;
-  gap: 0px 0px;
+  gap: 3rem;
   width: 100%;
   min-height: 100vh;
   transition: background-color 0.3s ease;
@@ -24,6 +24,10 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 250px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
   
   
   
@@ -33,7 +37,10 @@ export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 450px;
+    max-height: 450px;
     width: 100%;
+    height: 100%;
     margin-left: 2em;
   }
 
@@ -82,8 +89,8 @@ export const ContentContainer = styled.div`
     grid-template-columns: 0.7fr 1.3fr;
     grid-template-rows: 1fr;
     align-items: center;
-    justify-items: space-around;
-
+    justify-content: center;
+    width: 100%;
     gap: 20px;
     padding: 0 2em;
     grid-template-areas: "ImageContainer MainContainer";

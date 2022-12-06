@@ -121,7 +121,7 @@ export const MobileMenuListContainer = styled.div`
   left: 0;
   height: 250px;
   width: 100%;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.mobileMenuBg};
   z-index: 3;
   display: flex;
 
