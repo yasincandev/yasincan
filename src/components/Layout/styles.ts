@@ -30,6 +30,11 @@ export const ImageContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     grid-area: ImageContainer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 2em;
   }
 
 
@@ -69,6 +74,9 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2em;
+  margin-bottom: 2em;
+
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 0.7fr 1.3fr;

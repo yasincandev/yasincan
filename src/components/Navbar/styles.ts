@@ -2,13 +2,28 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   width: 100%;
   grid-area: 1 / 1 / 2 / 2;
   height: 5rem;
   padding: 0 2rem;
   color: ${(props) => props.theme.modeColor};
+  position: relative;
+  border-bottom: 2px solid ${(props) => props.theme.helloColor};
+`;
+
+export const DesktopMenu = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-right: 15px;
+    width: 100%;
+  }
 `;
 
 export const Logo = styled.div`
@@ -18,9 +33,11 @@ export const Logo = styled.div`
   letter-spacing: 0.1rem;
   padding-left: 15px;
   color: ${({ theme }) => theme.logoColor};
+  display: none;
 
   @media screen and (min-width: 768px) {
     font-size: 1rem;
+    display: flex;
   }
 `;
 
@@ -72,13 +89,25 @@ export const MenuItem = styled.li`
 export const MobileMenu = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  justify-content: end;
   padding-right: 15px;
   cursor: pointer;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileThemeContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  cursor: pointer;
   color: ${({ theme }) => theme.modeColor};
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -86,15 +115,13 @@ export const MobileMenu = styled.div`
 
 export const MobileMenuListContainer = styled.div`
   position: fixed;
-  top: 0;
+  top: 5rem;
   right: 0;
   bottom: 0;
   left: 0;
-
-  max-width: 50%;
+  height: 250px;
   width: 100%;
-
-  background-color: ${({ theme }) => theme.mobileMenuBg};
+  background-color: ${({ theme }) => theme.backgroundColor};
   z-index: 3;
   display: flex;
 
@@ -163,5 +190,34 @@ export const MobileMenuItem = styled.li`
   &:hover {
     color: ${({ theme }) => theme.hoverText};
     background-color: ${({ theme }) => theme.hoverBg};
+  }
+`;
+
+export const MobileLogo = styled.div`
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  padding-left: 15px;
+  color: ${({ theme }) => theme.logoColor};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileHamburgerMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+
+  cursor: pointer;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;

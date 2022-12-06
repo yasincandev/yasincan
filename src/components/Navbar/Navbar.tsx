@@ -12,6 +12,10 @@ import {
   MobileMenuList,
   MobileMenuListContainer,
   MobileMenuItem,
+  DesktopMenu,
+  MobileLogo,
+  MobileThemeContainer,
+  MobileHamburgerMenu,
 } from "./styles";
 import { Sunrise } from "../Icons/Sunrise";
 import { Sunset } from "../Icons/Sunset";
@@ -29,57 +33,71 @@ const Navbar: FC = () => {
 
   return (
     <Nav>
-      <Logo>
-        <h3>&#10094; YASINCANDEV &#10095;</h3>
-      </Logo>
-      <MenuList>
-        {pages.map((page) => {
-          return (
-            <Link
-              key={page.id}
-              href={page.href}
-              style={{ textDecoration: "none" }}
-            >
-              <MenuItem>{page.name}</MenuItem>
-            </Link>
-          );
-        })}
-      </MenuList>
-      <ThemeContainer>
-        {theme === "dark" ? (
-          <Sunset onClick={toggleTheme} style={{ width: "3.5rem" }} />
-        ) : (
-          <Sunrise onClick={toggleTheme} style={{ width: "3.5rem" }} />
-        )}
-      </ThemeContainer>
+      <DesktopMenu>
+        <Logo>
+          <h3>&#10094; YASINCANDEV &#10095;</h3>
+        </Logo>
+        <MenuList>
+          {pages.map((page) => {
+            return (
+              <Link
+                key={page.id}
+                href={page.href}
+                style={{ textDecoration: "none" }}
+              >
+                <MenuItem>{page.name}</MenuItem>
+              </Link>
+            );
+          })}
+        </MenuList>
+        <ThemeContainer>
+          {theme === "dark" ? (
+            <Sunset onClick={toggleTheme} style={{ width: "3.5rem" }} />
+          ) : (
+            <Sunrise onClick={toggleTheme} style={{ width: "3.5rem" }} />
+          )}
+        </ThemeContainer>
+      </DesktopMenu>
       <MobileMenu>
-        {open ? (
-          <CloseMenu
-            onClick={handleToggle}
-            style={{ width: "2.5rem", height: "2rem" }}
-          />
-        ) : (
-          <Hamburger onClick={handleToggle} style={{ width: "1.75rem" }} />
-        )}
-        {open && (
-          <MobileMenuListContainer>
-            <MobileMenuList>
-              {pages.map((page) => {
-                return (
-                  <Link
-                    key={page.id}
-                    href={page.href}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <MobileMenuItem onClick={handleToggle}>
-                      {page.name}
-                    </MobileMenuItem>
-                  </Link>
-                );
-              })}
-            </MobileMenuList>
-          </MobileMenuListContainer>
-        )}
+        <MobileThemeContainer>
+          {theme === "dark" ? (
+            <Sunset onClick={toggleTheme} style={{ width: "2rem" }} />
+          ) : (
+            <Sunrise onClick={toggleTheme} style={{ width: "2rem" }} />
+          )}
+        </MobileThemeContainer>
+        <MobileLogo>
+          <h3>&#10094; {""} &#10095;</h3>
+        </MobileLogo>
+        <MobileHamburgerMenu>
+          {open ? (
+            <CloseMenu
+              onClick={handleToggle}
+              style={{ width: "2.5rem", height: "2rem" }}
+            />
+          ) : (
+            <Hamburger onClick={handleToggle} style={{ width: "1.75rem" }} />
+          )}
+          {open ? (
+            <MobileMenuListContainer>
+              <MobileMenuList>
+                {pages.map((page) => {
+                  return (
+                    <Link
+                      key={page.id}
+                      href={page.href}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <MobileMenuItem onClick={handleToggle}>
+                        {page.name}
+                      </MobileMenuItem>
+                    </Link>
+                  );
+                })}
+              </MobileMenuList>
+            </MobileMenuListContainer>
+          ) : null}
+        </MobileHamburgerMenu>
       </MobileMenu>
     </Nav>
   );
