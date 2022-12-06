@@ -21,7 +21,7 @@ const Main: FC = () => {
       const randomIndex = Math.floor(Math.random() * greetings.length);
       setCurrentIndex(randomIndex);
       setCurrentGreeting(greetings[randomIndex]);
-    }, 112000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
