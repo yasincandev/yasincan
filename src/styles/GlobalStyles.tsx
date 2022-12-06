@@ -8,12 +8,13 @@ interface IGlobalStyles {
 
 export const GlobalStyles = createGlobalStyle<IGlobalStyles>`
     body {
-        background-color: ${({ theme }) => theme.backgroundColor};
-       
-        font-family: 'Open Sans', sans-serif;
-        transition: all 0.50s linear;
+       font-family: 'Open Sans', sans-serif;       
         margin: 0;
         padding: 0;
+        background-color: ${({ theme }) => theme.backgroundColor};
+        width: 100%;
+        min-height: 100vh;
+        transition: background-color 0.3s ease;
     }
 
     * {

@@ -6,6 +6,7 @@ import GlobalStyles from "../../styles/GlobalStyles";
 import { dark, light } from "../../theme";
 import Navbar from "../Navbar/Navbar";
 import { Container, ImageContainer, ContentContainer } from "./styles";
+import * as mainImage from "../../public/assets/main.png";
 
 type LayoutProps = {
   children: ReactNode;
@@ -22,7 +23,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         <ContentContainer>
           <ImageContainer>
             <Image
-              src='/assets/main.png'
+              src={mainImage}
               alt='main'
               width={500}
               height={500}
