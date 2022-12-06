@@ -71,10 +71,13 @@ export const ContentContainer = styled.div`
   align-items: center;
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 0.7fr 1.3fr;
     grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: space-around;
+
     gap: 20px;
-    padding: 0 1rem;
+    padding: 0 2em;
     grid-template-areas: "ImageContainer MainContainer";
     grid-area: 2 / 1 / 3 / 2;
   }
