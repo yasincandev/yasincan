@@ -47,7 +47,7 @@ const ContactPage: FC = () => {
           target='_blank'
           style={{
             display: "flex",
-
+            textDecoration: "none",
             alignItems: "center",
             gap: "0px 1em",
             width: "100%",
@@ -62,7 +62,7 @@ const ContactPage: FC = () => {
         <Link
           style={{
             display: "flex",
-
+            textDecoration: "none",
             alignItems: "center",
             gap: "0px 1em",
             width: "100%",
@@ -79,7 +79,7 @@ const ContactPage: FC = () => {
         <Link
           style={{
             display: "flex",
-
+            textDecoration: "none",
             alignItems: "center",
             gap: "0px 1em",
             width: "100%",
