@@ -13,7 +13,6 @@ import {
 } from "./styles";
 import * as mainImage from "../../public/assets/main.png";
 import Head from "next/head";
-import Meta from "../Metatags/Meta";
 
 type LayoutProps = {
   children: ReactNode;
@@ -25,7 +24,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
-      <Meta />
+
       <Container>
         <Navbar />
         <ContentContainer>
