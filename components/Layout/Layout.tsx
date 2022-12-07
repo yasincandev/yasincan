@@ -5,16 +5,9 @@ import { useThemeContext } from "../../hooks";
 import GlobalStyles from "../../styles/GlobalStyles";
 import { dark, light } from "../../theme";
 import Navbar from "../Navbar/Navbar";
-import {
-  Container,
-  ImageContainer,
-  ContentContainer,
-  MainContainer,
-} from "./styles";
+import { Container, ImageContainer, ContentContainer } from "./styles";
 import * as mainImage from "../../public/assets/main.png";
-import Head from "next/head";
 import Main from "../Main/Main";
-import About from "../../pages/about";
 import ContactPage from "../Contact/Contact";
 import AboutPage from "../About/AboutPage";
 

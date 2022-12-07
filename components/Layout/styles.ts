@@ -120,14 +120,3 @@ export const ImageContainer = styled.div`
   }
 
 `;
-
-export const MainContainer = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  @media screen and (min-width: 768px) {
-    grid-area: MainContainer;
-  }
-`;

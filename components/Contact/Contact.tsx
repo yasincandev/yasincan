@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { FC, useRef } from "react";
-import { Github, GithubIcon } from "../Icons/Github";
+import { FC } from "react";
+import { GithubIcon } from "../Icons/Github";
 import { Linkedin } from "../Icons/Linkedin";
-import { Resume, ResumeIcon } from "../Icons/Resume";
+import { ResumeIcon } from "../Icons/Resume";
 import {
   Contact,
   FormContainer,
