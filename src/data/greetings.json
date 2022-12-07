@@ -75,10 +75,7 @@
     "language": "Catalan",
     "hello": "Hola"
   },
-  {
-    "language": "Cebuano",
-    "hello": "Hello"
-  },
+
   {
     "language": "Chichewa",
     "hello": "Moni"
@@ -129,10 +126,6 @@
     "hello": "Hei"
   },
 
-  {
-    "language": "Frisian",
-    "hello": "Hello"
-  },
   {
     "language": "Galician",
     "hello": "Ola"
@@ -192,10 +185,6 @@
   },
 
   {
-    "language": "Javanese",
-    "hello": "Hello"
-  },
-  {
     "language": "Kannada",
     "hello": "ಹಲೋ"
   },
@@ -211,10 +200,7 @@
     "language": "Korean",
     "hello": "안녕하세요."
   },
-  {
-    "language": "Kurdish (Kurmanji)",
-    "hello": "Hello"
-  },
+
   {
     "language": "Kyrgyz",
     "hello": "салам"
@@ -243,14 +229,7 @@
     "language": "Macedonian",
     "hello": "Здраво"
   },
-  {
-    "language": "Malagasy",
-    "hello": "Hello"
-  },
-  {
-    "language": "Malay",
-    "hello": "Hello"
-  },
+
   {
     "language": "Malayalam",
     "hello": "ഹലോ"
@@ -315,22 +294,12 @@
     "language": "Samoan",
     "hello": "Talofa"
   },
-  {
-    "language": "Scots Gaelic",
-    "hello": "Hello"
-  },
+
   {
     "language": "Serbian",
     "hello": "Здраво"
   },
-  {
-    "language": "Sesotho",
-    "hello": "Hello"
-  },
-  {
-    "language": "Shona",
-    "hello": "Hello"
-  },
+
   {
     "language": "Sindhi",
     "hello": "هيلو"
@@ -347,10 +316,7 @@
     "language": "Slovenian",
     "hello": "Pozdravljeni"
   },
-  {
-    "language": "Somali",
-    "hello": "Hello"
-  },
+
   {
     "language": "Spanish",
     "hello": "Hola"
