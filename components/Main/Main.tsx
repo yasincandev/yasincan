@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { FC, useState, useEffect } from "react";
 import {
   Container,

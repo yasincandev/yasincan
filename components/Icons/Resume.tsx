@@ -1,5 +1,6 @@
 import * as React from "react";
 import { SVGProps } from "react";
+import styled from "styled-components";
 
 export const Resume: React.FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
@@ -16,3 +17,10 @@ export const Resume: React.FC<SVGProps<SVGSVGElement>> = (props) => {
     </svg>
   );
 };
+
+export const ResumeIcon = styled(Resume)`
+  fill: ${(props) => props.theme.greetingColor};
+  width: 100%;
+  height: 100%;
+  transition: fill 0.2s ease-in-out;
+`;

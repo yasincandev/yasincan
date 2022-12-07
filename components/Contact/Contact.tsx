@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FC, useRef } from "react";
-import { Github } from "../Icons/Github";
+import { Github, GithubIcon } from "../Icons/Github";
 import { Linkedin } from "../Icons/Linkedin";
-import { Resume } from "../Icons/Resume";
+import { Resume, ResumeIcon } from "../Icons/Resume";
 import {
   Contact,
   FormContainer,
@@ -72,7 +72,7 @@ const ContactPage: FC = () => {
           target='_blank'
         >
           <LinkContainer>
-            <Github style={{ width: "2.5rem", height: "2.5rem" }} />
+            <GithubIcon style={{ width: "2.5rem", height: "2.5rem" }} />
             <LinkText>Review My Code</LinkText>
           </LinkContainer>
         </Link>
@@ -89,7 +89,7 @@ const ContactPage: FC = () => {
           target='_blank'
         >
           <LinkContainer>
-            <Resume style={{ width: "2.5rem", height: "2.5rem" }} />
+            <ResumeIcon style={{ width: "2.5rem", height: "2.5rem" }} />
             <LinkText>Check Out My Resume</LinkText>
           </LinkContainer>
         </Link>

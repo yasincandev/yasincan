@@ -3,10 +3,6 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import Layout from "../components/Layout/Layout";
 import ThemeContextProvider from "../context/ThemeContext";
-import { useThemeContext } from "../hooks";
-import { dark, light } from "../theme";
-import GlobalStyles from "../styles/GlobalStyles";
-import { ThemeProvider } from "styled-components";
 import Head from "next/head";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {

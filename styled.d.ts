@@ -11,5 +11,6 @@ declare module "styled-components" {
     aboutMeBg: string;
     aboutMeColor: string;
     mobileMenuBg: string;
+    greetingColor: string;
   }
 }

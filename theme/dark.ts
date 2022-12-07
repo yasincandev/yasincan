@@ -11,6 +11,7 @@ const theme: DefaultTheme = {
   aboutMeBg: Colors.wetasphalt,
   aboutMeColor: Colors.cloudWhite,
   mobileMenuBg: Colors.wetasphalt,
+  greetingColor: Colors.cloudWhite,
 };
 
 export default theme;

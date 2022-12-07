@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-
+  align-items: center;
   flex-direction: column;
   gap: 3rem;
   width: 100%;
@@ -11,11 +11,55 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
 
   @media screen and (min-width: 768px) {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-rows: 0.3fr 1.7fr;
-    gap: 3em 1em;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  margin: 0 auto;
+  padding: 1em;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 2560px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 60%;
   }
 `;
 
@@ -24,10 +68,11 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 250px;
+ max-width: 300px;
+
+  margin: 0 auto;
   width: 100%;
-  max-height: 250px;
-  height: 100%;
+
   
   
   
@@ -37,10 +82,10 @@ export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 450px;
-    max-height: 450px;
+    margin: 0 auto;
     width: 100%;
-    height: 100%;
+    max-width: 450px;
+
     margin-left: 2em;
   }
 
@@ -74,28 +119,6 @@ export const ImageContainer = styled.div`
   }
   }
 
-`;
-
-export const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-  margin-bottom: 2em;
-
-  @media screen and (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 20px;
-    padding: 0 2em;
-    grid-template-areas: "ImageContainer MainContainer";
-    grid-area: 2 / 1 / 3 / 2;
-  }
 `;
 
 export const MainContainer = styled.main`

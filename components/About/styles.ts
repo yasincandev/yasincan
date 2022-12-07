@@ -43,7 +43,7 @@ export const AboutMe = styled.div`
   align-items: center;
   width: 80%;
   padding: 1rem;
-  box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem 0.1rem #393e46;
   @media (max-width: 768px) {
     width: 90%;
   }
@@ -63,4 +63,13 @@ export const AboutMeText = styled.p`
   padding: 0.5rem;
   color: ${(props) => props.theme.aboutMeColor};
   line-height: 1.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5em;
+    line-height: 2rem;
+  }
 `;

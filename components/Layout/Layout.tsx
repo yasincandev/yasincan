@@ -13,6 +13,10 @@ import {
 } from "./styles";
 import * as mainImage from "../../public/assets/main.png";
 import Head from "next/head";
+import Main from "../Main/Main";
+import About from "../../pages/about";
+import ContactPage from "../Contact/Contact";
+import AboutPage from "../About/AboutPage";
 
 type LayoutProps = {
   children: ReactNode;
@@ -44,8 +48,10 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
               height={400}
             />
           </ImageContainer>
-          <MainContainer>{children}</MainContainer>
+          <Main />
         </ContentContainer>
+        <AboutPage />
+        <ContactPage />
       </Container>
     </ThemeProvider>
   );

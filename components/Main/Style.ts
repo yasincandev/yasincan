@@ -12,7 +12,7 @@ export const GreetingContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   margin-bottom: 2rem;
   justify-content: space-between;
   width: 100%;
@@ -22,7 +22,7 @@ export const GreetingContainer = styled.div`
 
 export const GreetingText = styled.h1`
   font-family: "Poppins", sans-serif;
-  color: ${(props) => props.theme.helloColor};
+  color: ${(props) => props.theme.greetingColor};
   font-weight: 900;
   font-style: italic;
   text-align: center;
@@ -89,6 +89,10 @@ export const InfoText = styled.span`
   color: ${(props) => props.theme.modeColor};
 
   @media screen and (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 2rem;
   }
 `;
