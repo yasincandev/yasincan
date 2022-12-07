@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   display: flex;
-
   align-items: center;
   width: 100%;
   grid-area: 1 / 1 / 2 / 2;
@@ -65,9 +64,7 @@ export const MenuList = styled.ul`
   list-style: none;
   font-weight: 700;
   gap: 1rem;
-
   color: ${({ theme }) => theme.modeColor};
-
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -114,7 +111,7 @@ export const MobileThemeContainer = styled.div`
 `;
 
 export const MobileMenuListContainer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 5rem;
   right: 0;
   bottom: 0;
@@ -124,43 +121,49 @@ export const MobileMenuListContainer = styled.div`
   background-color: ${({ theme }) => theme.mobileMenuBg};
   z-index: 3;
   display: flex;
-
   gap: 2rem;
 
-  -webkit-animation: MobileMenuListContainer 1.2s
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-  animation: MobileMenuListContainer 1.2s
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  -webkit-animation: MobileMenuListContainer 1.2s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: MobileMenuListContainer 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
 
   @-webkit-keyframes MobileMenuListContainer {
     0% {
-      -webkit-transform: rotateY(-70deg);
-      transform: rotateY(-70deg);
-      -webkit-transform-origin: left;
-      transform-origin: left;
+      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+      filter: blur(40px);
       opacity: 0;
     }
     100% {
-      -webkit-transform: rotateY(0);
-      transform: rotateY(0);
-      -webkit-transform-origin: left;
-      transform-origin: left;
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+      transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+      filter: blur(0);
       opacity: 1;
     }
   }
   @keyframes MobileMenuListContainer {
     0% {
-      -webkit-transform: rotateY(-70deg);
-      transform: rotateY(-70deg);
-      -webkit-transform-origin: left;
-      transform-origin: left;
+      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+      filter: blur(40px);
       opacity: 0;
     }
     100% {
-      -webkit-transform: rotateY(0);
-      transform: rotateY(0);
-      -webkit-transform-origin: left;
-      transform-origin: left;
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+      transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+      filter: blur(0);
       opacity: 1;
     }
   }
@@ -169,8 +172,6 @@ export const MobileMenuListContainer = styled.div`
 export const MobileMenuList = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: center;
-
   list-style: none;
   font-weight: 700;
   gap: 2rem;
@@ -214,7 +215,6 @@ export const MobileHamburgerMenu = styled.div`
   align-items: center;
   justify-content: end;
   gap: 1rem;
-
   cursor: pointer;
   width: 100%;
   @media screen and (min-width: 768px) {
