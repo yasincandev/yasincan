@@ -34,29 +34,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='apple-touch-icon' href='/assets/apple-touch-icon.png' />
-          <meta
-            name='description'
-            content="Hi. I'm Yasin. I'm a front end developer.I build things for the web."
-          />
-          <meta property='og:url' content='https://yasincan.me' />
-          <meta property='og:title' content='Yasin Can | Front End Developer' />
-          <meta
-            property='og:description'
-            content="Hi. I'm Yasin. I'm a front end developer.I build things for the web."
-          />
-          <meta property='og:image' content='/assets/meta-image.png' />
-
-          <meta name='twitter:card' content='summary_large_image' />
-          <meta name='twitter:url' content='https://yasincan.me' />
-          <meta
-            name='twitter:title'
-            content='Yasin Can | Front End Developer'
-          />
-          <meta
-            name='twitter:description'
-            content="Hi. I'm Yasin. I'm a front end developer.I build things for the web."
-          />
           <meta name='twitter:image' content='/images/meta-image.png' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
