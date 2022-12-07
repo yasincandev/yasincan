@@ -22,6 +22,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
     <ThemeContextProvider>
       <Head>
         <title>Yasin Can | Front End Developer</title>
+        <link rel='icon' href='/assets/favicon.png' />
         <link rel='apple-touch-icon' href='/assets/apple-touch-icon.png' />
         <meta
           name='description'
