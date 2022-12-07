@@ -7,7 +7,8 @@ const Meta: FC = () => {
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='theme-color' content='#000000' />
-      <title>Yasin Can | Front End Developer</title>
+      <meta name='twitter:image' content='/images/meta-image.png' />
+
       <meta
         name='description'
         content="Hi. I'm Yasin. I'm a front end developer.I build things for the web."
@@ -34,6 +35,7 @@ const Meta: FC = () => {
         name='twitter:description'
         content="Hi. I'm Yasin. I'm a front end developer.I build things for the web."
       />
+      <title>Yasin Can | Front End Developer</title>
     </Head>
   );
 };

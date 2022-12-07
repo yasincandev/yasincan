@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name='twitter:image' content='/images/meta-image.png' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             rel='preconnect'
