@@ -34,8 +34,8 @@ const Main: FC = () => {
       <GreetingContainer>
         <GreetingText>{greeting.hello}</GreetingText>
         <Info>
-          <InfoText> I&#39;m Yasin.</InfoText>
-          <InfoText>I build things for the web.</InfoText>
+          <InfoText> Welcome! Hope you're doing well.</InfoText>
+          <InfoText> I&#39;m Yasin. I build things for the web.</InfoText>
         </Info>
       </GreetingContainer>
     );
