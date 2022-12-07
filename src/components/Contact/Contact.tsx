@@ -56,7 +56,7 @@ const ContactPage: FC = () => {
         >
           <LinkContainer>
             <Linkedin style={{ width: "2.5rem", height: "2.5rem" }} />
-            <LinkText>Connect with me on LinkedIn</LinkText>
+            <LinkText>Let&#39;s Connect! </LinkText>
           </LinkContainer>
         </Link>
         <Link
@@ -73,7 +73,7 @@ const ContactPage: FC = () => {
         >
           <LinkContainer>
             <Github style={{ width: "2.5rem", height: "2.5rem" }} />
-            <LinkText>Check out my Github</LinkText>
+            <LinkText>Review My Code</LinkText>
           </LinkContainer>
         </Link>
         <Link
@@ -90,7 +90,7 @@ const ContactPage: FC = () => {
         >
           <LinkContainer>
             <Resume style={{ width: "2.5rem", height: "2.5rem" }} />
-            <LinkText>Check out my Resume</LinkText>
+            <LinkText>Check Out My Resume</LinkText>
           </LinkContainer>
         </Link>
       </LinksContainer>
