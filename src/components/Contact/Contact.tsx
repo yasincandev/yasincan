@@ -97,9 +97,9 @@ const ContactPage: FC = () => {
       <FormContainer onSubmit={sendEmail}>
         <FormHeader>Get In Touch</FormHeader>
         <Label htmlFor='name'>Name</Label>
-        <Input type='text' name='name' />
+        <Input type='text' name='name' required />
         <Label htmlFor='email'>Email</Label>
-        <Input type='email' name='email' />
+        <Input type='email' name='email' required />
         <Label htmlFor='message'>What is your Message?</Label>
         <TextArea name='message' />
         <SubmitInput type='submit' value='Send' />
