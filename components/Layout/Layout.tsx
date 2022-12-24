@@ -16,7 +16,11 @@ import Main from '../Main/Main'
 import Greeting from '../Greeting/Greeting'
 import greetings from '../../data/greetings.json'
 
-const Layout: FC = () => {
+type LayoutProps = {
+  children: React.ReactNode
+}
+
+const Layout: FC<LayoutProps> = ({ children }) => {
   const { theme } = useThemeContext()
   const currentTheme = theme === 'dark' ? dark : light
   const [currentIndex, setCurrentIndex] = useState(0)
