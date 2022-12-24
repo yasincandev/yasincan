@@ -1,41 +1,57 @@
-import Image from "next/image";
-import React, { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
-import { useThemeContext } from "../../hooks";
-import GlobalStyles from "../../styles/GlobalStyles";
-import { dark, light } from "../../theme";
-import Navbar from "../Navbar/Navbar";
-import { Container, ImageContainer, ContentContainer } from "./styles";
-import * as mainImage from "../../public/assets/main.png";
-import Main from "../Main/Main";
-import ContactPage from "../Contact/Contact";
-import AboutPage from "../About/AboutPage";
+import Image from 'next/image'
+import { FC, useEffect, useState } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { useThemeContext } from '../../hooks'
+import GlobalStyles from '../../styles/GlobalStyles'
+import { dark, light } from '../../theme'
+import Navbar from '../Navbar/Navbar'
+import {
+  Container,
+  ImageContainer,
+  ContentContainer,
+  GreetingMobileContainer,
+} from './styles'
+import * as mainImage from '../../public/assets/main.png'
+import Main from '../Main/Main'
+import Greeting from '../Greeting/Greeting'
+import greetings from '../../data/greetings.json'
 
-type LayoutProps = {
-  children: ReactNode;
-};
+const Layout: FC = () => {
+  const { theme } = useThemeContext()
+  const currentTheme = theme === 'dark' ? dark : light
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentGreeting, setCurrentGreeting] = useState(
+    greetings[currentIndex]
+  )
 
-const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
-  const { theme } = useThemeContext();
-  const currentTheme = theme === "dark" ? dark : light;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * greetings.length)
+      setCurrentIndex(randomIndex)
+      setCurrentGreeting(greetings[randomIndex])
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [])
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
-
       <Container>
         <Navbar />
+        <GreetingMobileContainer>
+          <Greeting greeting={currentGreeting} />
+        </GreetingMobileContainer>
         <ContentContainer>
           <ImageContainer>
             <Image
               src={mainImage}
-              alt='main'
+              alt="main"
               priority
-              placeholder='blur'
+              placeholder="blur"
               style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center',
               }}
               width={400}
               height={400}
@@ -43,11 +59,9 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           </ImageContainer>
           <Main />
         </ContentContainer>
-        <AboutPage />
-        <ContactPage />
       </Container>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

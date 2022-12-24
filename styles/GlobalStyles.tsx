@@ -1,9 +1,9 @@
-import { createGlobalStyle } from "styled-components";
-import { dark } from "../theme";
-import { light } from "../theme";
+import { createGlobalStyle } from 'styled-components'
+import { dark } from '../theme'
+import { light } from '../theme'
 
 interface IGlobalStyles {
-  theme: typeof dark | typeof light;
+  theme: typeof dark | typeof light
 }
 
 export const GlobalStyles = createGlobalStyle<IGlobalStyles>`
@@ -22,6 +22,6 @@ export const GlobalStyles = createGlobalStyle<IGlobalStyles>`
        
     }
           
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

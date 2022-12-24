@@ -1,8 +1,8 @@
-import { FC } from "react";
-import Main from "../components/Main/Main";
+import { FC } from 'react'
+import Main from '../components/Main/Main'
 
 const Home: FC = () => {
-  return <Main />;
-};
+  return <Main />
+}
 
-export default Home;
+export default Home

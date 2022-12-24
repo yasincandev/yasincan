@@ -1,158 +1,34 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const Contact = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 90%;
-  height: 100%;
-  gap: 1em;
-  list-style: none;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.5em;
-  color: ${(props) => props.theme.helloColor};
-  box-shadow: 0 0 10px 0 #393e46;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-
-  @media screen and (min-width: 768px) {
-    width: 80%;
-    height: 90%;
-    font-size: 1.5em;
-    flex-direction: row;
-  }
-
-  -webkit-animation: Contact 0.5s 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    both;
-  animation: Contact 0.5s 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
-
-  @-webkit-keyframes Contact {
-    0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-  }
-  @keyframes Contact {
-    0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-  }
-`;
-
-export const LinksContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-
-  gap: 1em;
+  gap: 2em;
   list-style: none;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.5em;
-  color: ${(props) => props.theme.greetingColor};
-  padding: 1em;
+  font-family: 'Poppins', sans-serif;
+  color: ${props => props.theme.helloColor};
   width: 100%;
-  height: 100%;
+  padding: 1em 0;
 
-  @media screen and (min-width: 768px) {
-    width: 50%;
-    height: 100%;
-    font-size: 1.5em;
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-`;
-
-export const FormContainer = styled.form`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  width: 80%;
-  margin: 0 auto;
-  border-left: 1px solid ${(props) => props.theme.greetingColor};
-
-  @media screen and (max-width: 768px) {
-    border-left: none;
-    width: 100%;
-    border-top: 1px solid ${(props) => props.theme.greetingColor};
-  }
-`;
-
-export const FormHeader = styled.h3`
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2em;
-  color: ${(props) => props.theme.greetingColor};
-`;
+`
 
 export const LinkContainer = styled.div`
   display: flex;
   align-items: center;
-
-  gap: 0px 1em;
-  width: 100%;
-  &:hover {
-    transform: scale(1.1);
-    transition: 0.5s ease-in-out;
-  }
+  justify-content: center;
+  flex-direction: column;
   cursor: pointer;
-`;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  text-align: center;
+`
 
 export const LinkText = styled.p`
-  font-size: 16px;
-  color: ${(props) => props.theme.greetingColor};
-`;
-
-export const Input = styled.input`
-  font-size: 16px;
-  padding: 10px;
-  width: 80%;
-  border-bottom: 1px solid ${(props) => props.theme.greetingColor};
-  background: rgba(20, 20, 20, 0.2);
-  color: white;
-  outline: none;
-`;
-
-export const Label = styled.label`
-  font-size: 16px;
-  color: ${(props) => props.theme.greetingColor};
-`;
-
-export const TextArea = styled.textarea`
-  font-size: 16px;
-  height: 5em;
-  padding: 10px;
-  width: 80%;
-  border-bottom: 1px solid ${(props) => props.theme.greetingColor};
-  background: rgba(20, 20, 20, 0.2);
-  color: white;
-  outline: none;
-`;
-
-export const SubmitInput = styled.input`
-  border: 1px solid ${(props) => props.theme.greetingColor};
-  background: rgba(20, 20, 20, 0.6);
-  font-size: 18px;
-  color: white;
-  margin-top: 20px;
-  padding: 10px 50px;
-  cursor: pointer;
-  transition: 0.4s;
-  &:hover {
-    background: rgba(20, 20, 20, 0.8);
-    padding: 10px 80px;
-  }
-`;
+  color: ${props => props.theme.greetingColor};
+  font-size: 0.75rem;
+`

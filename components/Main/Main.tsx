@@ -1,50 +1,18 @@
-import React, { FC, useState, useEffect } from "react";
-import {
-  Container,
-  GreetingContainer,
-  GreetingText,
-  Info,
-  InfoText,
-} from "./Style";
-import greetings from "../../data/greetings.json";
-import { IHelloProps } from "../../types";
+import { FC } from 'react'
+import { Container, InfoText } from './Style'
+import Contact from '../Contact/Contact'
 
 const Main: FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentGreeting, setCurrentGreeting] = useState(
-    greetings[currentIndex]
-  );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * greetings.length);
-      setCurrentIndex(randomIndex);
-      setCurrentGreeting(greetings[randomIndex]);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
-  type GreetingProps = {
-    greeting: IHelloProps;
-  };
-
-  const Greeting: FC<GreetingProps> = ({ greeting }) => {
-    return (
-      <GreetingContainer>
-        <GreetingText>{greeting.hello}</GreetingText>
-        <Info>
-          <InfoText> Welcome! Hope you&#39;re doing well.</InfoText>
-          <InfoText> I&#39;m Yasin. I build things for the web.</InfoText>
-        </Info>
-      </GreetingContainer>
-    );
-  };
-
   return (
     <Container>
-      <Greeting greeting={currentGreeting} />
+      <InfoText>I&apos;m Yasin</InfoText>
+      <InfoText>
+        a self-taught frontend developer always looking to improve my skills and
+        push the boundaries of what&apos;s possible on the web.
+      </InfoText>
+      <Contact />
     </Container>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main

@@ -1,20 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
+
   width: 100%;
   min-height: 100vh;
   transition: background-color 0.3s ease;
-  background-color: ${(props) => props.theme.backgroundColor};
+  background-color: ${props => props.theme.backgroundColor};
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 3rem;
   }
-`;
+`
 
 export const ContentContainer = styled.div`
   display: flex;
@@ -61,7 +63,7 @@ export const ContentContainer = styled.div`
     gap: 1em;
     width: 60%;
   }
-`;
+`
 
 export const ImageContainer = styled.div`
  
@@ -119,4 +121,15 @@ export const ImageContainer = styled.div`
   }
   }
 
-`;
+`
+
+export const GreetingMobileContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`

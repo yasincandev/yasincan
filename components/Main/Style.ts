@@ -1,98 +1,32 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  gap: 2rem;
-`;
-
-export const GreetingContainer = styled.div`
-  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-`;
-
-export const GreetingText = styled.h1`
-  font-family: "Poppins", sans-serif;
-  color: ${(props) => props.theme.greetingColor};
-  font-weight: 900;
-  font-style: italic;
-  text-align: center;
-  font-size: 1.5rem;
-
-  text-transform: Capitalize;
-  padding: 0.5em;
-  width: 100%;
-  letter-spacing: 0.2rem;
-  -webkit-animation: greetingContainer 1s cubic-bezier(0.165, 0.84, 0.44, 1)
-    both;
-  animation: greetingContainer 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
-  @-webkit-keyframes greetingContainer {
-    0% {
-      -webkit-transform: rotateX(-100deg);
-      transform: rotateX(-100deg);
-      -webkit-transform-origin: top;
-      transform-origin: top;
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-      -webkit-transform-origin: top;
-      transform-origin: top;
-      opacity: 1;
-    }
-  }
-  @keyframes greetingContainer {
-    0% {
-      -webkit-transform: rotateX(-100deg);
-      transform: rotateX(-100deg);
-      -webkit-transform-origin: top;
-      transform-origin: top;
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-      -webkit-transform-origin: top;
-      transform-origin: top;
-      opacity: 1;
-    }
-  }
-`;
-
-export const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
   justify-content: center;
-  align-items: center;
-  color: ${(props) => props.theme.helloColor};
-`;
+  text-align: justify;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
 
-export const InfoText = styled.span`
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  @media screen and (min-width: 768px) {
+    gap: 2rem;
+  }
+`
+
+export const InfoText = styled.p`
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2rem;
-  color: ${(props) => props.theme.modeColor};
+  color: ${props => props.theme.modeColor};
+  padding: 0 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 
   @media screen and (min-width: 768px) {
     font-size: 1.25rem;
   }
-
-  @media screen and (min-width: 1440px) {
-    font-size: 2rem;
-  }
-`;
+`

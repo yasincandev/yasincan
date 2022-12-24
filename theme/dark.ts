@@ -1,5 +1,5 @@
-import { DefaultTheme } from "styled-components";
-import Colors from "./colors";
+import { DefaultTheme } from 'styled-components'
+import Colors from './colors'
 
 const theme: DefaultTheme = {
   backgroundColor: Colors.midnightBlue,
@@ -12,6 +12,6 @@ const theme: DefaultTheme = {
   aboutMeColor: Colors.cloudWhite,
   mobileMenuBg: Colors.wetasphalt,
   greetingColor: Colors.cloudWhite,
-};
+}
 
-export default theme;
+export default theme
