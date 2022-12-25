@@ -1,12 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import useThemeContext from '../../hooks/useThemeContext'
-import {
-  Nav,
-  Logo,
-  ThemeContainer,
-  GreetingContainer,
-  GrettingText,
-} from './styles'
+import { Nav, Logo, ThemeContainer, GreetingContainer } from './styles'
 import { Sunrise } from '../Icons/Sunrise'
 import { Sunset } from '../Icons/Sunset'
 import greetings from '../../data/greetings.json'

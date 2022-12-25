@@ -20,7 +20,7 @@ type LayoutProps = {
   children: React.ReactNode
 }
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = () => {
   const { theme } = useThemeContext()
   const currentTheme = theme === 'dark' ? dark : light
   const [currentIndex, setCurrentIndex] = useState(0)
