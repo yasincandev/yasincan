@@ -48,9 +48,9 @@ export const GrettingText = styled.h3`
   font-weight: 900;
   font-style: italic;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1em;
   text-transform: Capitalize;
-  padding: 0.5em;
+
   width: 100%;
   letter-spacing: 0.2rem;
   -webkit-animation: GreetingContainer 1s cubic-bezier(0.165, 0.84, 0.44, 1)
@@ -87,6 +87,10 @@ export const GrettingText = styled.h3`
       transform-origin: top;
       opacity: 1;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.5rem;
   }
 `
 

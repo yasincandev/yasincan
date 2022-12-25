@@ -5,12 +5,10 @@ import Layout from '../components/Layout/Layout'
 import ThemeContextProvider from '../context/ThemeContext'
 import Head from 'next/head'
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
-
 type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
+  Component: NextPage & {
+    getLayout?: (page: ReactElement) => ReactNode
+  }
 }
 
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {

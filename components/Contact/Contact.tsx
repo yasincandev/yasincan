@@ -9,46 +9,47 @@ import { MediumIcon } from '../Icons/Medium'
 const Contact: FC = () => {
   return (
     <Container>
-      <Link
-        href="https://linkedin.com/in/yasincandev"
-        target="_blank"
-        style={{ textDecoration: 'none' }}
-      >
-        <LinkContainer>
+      <LinkContainer>
+        <Link
+          href="https://linkedin.com/in/yasincandev"
+          target="_blank"
+          style={{ textDecoration: 'none' }}
+        >
           <LinkedinIcon />
           <LinkText>Let&#39;s Connect! </LinkText>
-        </LinkContainer>
-      </Link>
-      <Link
-        href="https://github.com/yasincandev"
-        target="_blank"
-        style={{ textDecoration: 'none' }}
-      >
-        <LinkContainer>
+        </Link>
+      </LinkContainer>
+
+      <LinkContainer>
+        <Link
+          href="https://github.com/yasincandev"
+          target="_blank"
+          style={{ textDecoration: 'none' }}
+        >
           <GithubIcon />
           <LinkText>Review My Code</LinkText>
-        </LinkContainer>
-      </Link>
-      <Link
-        href="https://drive.google.com/file/d/1qAf-7f6HPLbHbzNaF6fK-W9xlC2GOjfz/view"
-        target="_blank"
-        style={{ textDecoration: 'none' }}
-      >
-        <LinkContainer>
+        </Link>
+      </LinkContainer>
+      <LinkContainer>
+        <Link
+          href="https://drive.google.com/file/d/1OxmrpVn40hrvqBhuluor-wMoVan1xEuj/view?usp=sharing"
+          target="_blank"
+          style={{ textDecoration: 'none' }}
+        >
           <ResumeIcon />
           <LinkText>Check Out My Resume</LinkText>
-        </LinkContainer>
-      </Link>
-      <Link
-        href="https://medium.com/@yasincandev"
-        target="_blank"
-        style={{ textDecoration: 'none' }}
-      >
-        <LinkContainer>
+        </Link>
+      </LinkContainer>
+      <LinkContainer>
+        <Link
+          href="https://medium.com/@yasincandev"
+          target="_blank"
+          style={{ textDecoration: 'none' }}
+        >
           <MediumIcon />
           <LinkText>My Blog</LinkText>
-        </LinkContainer>
-      </Link>
+        </Link>
+      </LinkContainer>
     </Container>
   )
 }

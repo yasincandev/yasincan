@@ -25,4 +25,12 @@ export const ResumeIcon = styled(Resume)`
   max-height: 64px;
   width: 100%;
   height: 100%;
+  padding: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
+  border: 3px solid ${props => props.theme.greetingColor};
+  border-radius: 50%;
+  &:hover {
+    transform: scale(1.1);
+  }
 `

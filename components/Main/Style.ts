@@ -10,6 +10,11 @@ export const Container = styled.div`
   height: 100%;
   font-weight: 500;
 
+  p:first-child {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
   @media screen and (min-width: 768px) {
     gap: 2rem;
   }

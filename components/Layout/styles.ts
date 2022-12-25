@@ -24,7 +24,7 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 15px;
   margin: 0 auto;
   padding: 1em;
 
@@ -70,8 +70,7 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
- max-width: 300px;
-
+ max-width: 200px;
   margin: 0 auto;
   width: 100%;
 
@@ -128,6 +127,7 @@ export const GreetingMobileContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.75rem;
 
   @media screen and (min-width: 768px) {
     display: none;
